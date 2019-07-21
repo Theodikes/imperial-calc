@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Theodikes/imperial-calc/static/css/main.34de6062.chunk.css",
+    "main.js": "/Theodikes/imperial-calc/static/js/main.b991b2d0.chunk.js",
+    "main.js.map": "/Theodikes/imperial-calc/static/js/main.b991b2d0.chunk.js.map",
+    "runtime~main.js": "/Theodikes/imperial-calc/static/js/runtime~main.225c21c3.js",
+    "runtime~main.js.map": "/Theodikes/imperial-calc/static/js/runtime~main.225c21c3.js.map",
+    "static/js/2.b2bb8cf4.chunk.js": "/Theodikes/imperial-calc/static/js/2.b2bb8cf4.chunk.js",
+    "static/js/2.b2bb8cf4.chunk.js.map": "/Theodikes/imperial-calc/static/js/2.b2bb8cf4.chunk.js.map",
+    "index.html": "/Theodikes/imperial-calc/index.html",
+    "precache-manifest.245c406c3dc823f8c807dc3229ac715c.js": "/Theodikes/imperial-calc/precache-manifest.245c406c3dc823f8c807dc3229ac715c.js",
+    "service-worker.js": "/Theodikes/imperial-calc/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/Theodikes/imperial-calc/static/css/main.34de6062.chunk.css.map",
+    "static/media/logo.svg": "/Theodikes/imperial-calc/static/media/logo.5d5d9eef.svg",
+    "static/media/shape.svg": "/Theodikes/imperial-calc/static/media/shape.43e76283.svg"
+  }
+}
