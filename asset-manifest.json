@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/imperial-calc/static/css/main.34de6062.chunk.css",
-    "main.js": "/imperial-calc/static/js/main.4bba8821.chunk.js",
-    "main.js.map": "/imperial-calc/static/js/main.4bba8821.chunk.js.map",
+    "main.js": "/imperial-calc/static/js/main.8ecb15c4.chunk.js",
+    "main.js.map": "/imperial-calc/static/js/main.8ecb15c4.chunk.js.map",
     "runtime~main.js": "/imperial-calc/static/js/runtime~main.60c5a304.js",
     "runtime~main.js.map": "/imperial-calc/static/js/runtime~main.60c5a304.js.map",
     "static/js/2.a9d021fc.chunk.js": "/imperial-calc/static/js/2.a9d021fc.chunk.js",
     "static/js/2.a9d021fc.chunk.js.map": "/imperial-calc/static/js/2.a9d021fc.chunk.js.map",
     "index.html": "/imperial-calc/index.html",
-    "precache-manifest.d178bd3d9d85a40d07b5de3526897c4d.js": "/imperial-calc/precache-manifest.d178bd3d9d85a40d07b5de3526897c4d.js",
+    "precache-manifest.7f5e6b18b2078e14d15230b1cf3690e2.js": "/imperial-calc/precache-manifest.7f5e6b18b2078e14d15230b1cf3690e2.js",
     "service-worker.js": "/imperial-calc/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/imperial-calc/static/css/main.34de6062.chunk.css.map",
     "static/media/logo.svg": "/imperial-calc/static/media/logo.5d5d9eef.svg",

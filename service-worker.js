@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/imperial-calc/precache-manifest.d178bd3d9d85a40d07b5de3526897c4d.js"
+  "/imperial-calc/precache-manifest.7f5e6b18b2078e14d15230b1cf3690e2.js"
 );
 
 self.addEventListener('message', (event) => {
