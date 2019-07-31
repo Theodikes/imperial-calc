@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "caadd84b15d09ae68aa3ee3b46dc57e7",
+    "revision": "52652bebdf3c9274c179cb32d5504e13",
     "url": "/imperial-calc/index.html"
   },
   {
-    "revision": "a2c0333144f677a4cd78",
+    "revision": "7fc9219d9e912835d246",
     "url": "/imperial-calc/static/css/main.34de6062.chunk.css"
   },
   {
-    "revision": "bb23cdef15a192926239",
-    "url": "/imperial-calc/static/js/2.a9d021fc.chunk.js"
+    "revision": "e4fdca1eb7acbf6df046",
+    "url": "/imperial-calc/static/js/2.22f3c1ab.chunk.js"
   },
   {
-    "revision": "a2c0333144f677a4cd78",
-    "url": "/imperial-calc/static/js/main.80c3c905.chunk.js"
+    "revision": "7fc9219d9e912835d246",
+    "url": "/imperial-calc/static/js/main.4ae00754.chunk.js"
   },
   {
     "revision": "014365d85807c0adfa0a",
