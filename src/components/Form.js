@@ -5,6 +5,8 @@ import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import objectAssignDeep from "../objectAssignDeep";
+import formulas from "../formData/formulas";
+import fields from "../formData/fields";
 
 const styles = theme => ({
   paper: {
@@ -40,7 +42,7 @@ const styles = theme => ({
     }
   },
   primary: {
-    marginRight: theme.spacing.unit * 2
+    marginRight: theme.spacing(2)
   },
   secondary: {
     background: theme.palette.secondary["100"],
@@ -53,18 +55,29 @@ const styles = theme => ({
 });
 
 class Form extends Component {
-  state = {
-    inputs: Object.assign(this.props.fields, this.props.savedData),
-    results: null
-  };
+  constructor(props) {
+    super(props);
+    const page = window.location.hash.slice(2) || "country";
+    console.log(props.savedData);
+
+    this.state = {
+      inputs: Object.assign(fields[page], props.savedData),
+      income: null,
+      formattedOutput: null,
+      pageName: page
+    };
+  }
 
   handleSubmit = e => {
     e.preventDefault();
-    const { saveData, formula: calculateIncome } = this.props;
-    const { inputs } = this.state;
-    const state_change = calculateIncome(inputs).state_change || {};
+    const { saveData } = this.props;
+    const { inputs, pageName } = this.state;
+    const calculateIncome = formulas[pageName];
+    const result = calculateIncome(inputs);
+    const state_change = result.state_change || {};
+    const formattedOutput = result.formattedOutput || null;
     const data = objectAssignDeep(inputs, state_change);
-    this.setState({ results: calculateIncome(inputs).value, inputs: data });
+    this.setState({ income: result.value, inputs: data, formattedOutput });
     saveData(data);
   };
 
@@ -81,8 +94,8 @@ class Form extends Component {
   };
 
   render() {
-    const { classes, pageName } = this.props;
-    const { inputs, results } = this.state;
+    const { classes } = this.props;
+    const { inputs, income, formattedOutput, pageName } = this.state;
 
     return (
       <Fragment>
@@ -106,20 +119,22 @@ class Form extends Component {
                 />
               ))}
             </div>
-            {results && (
+            {income && (
               <Paper
                 className={classes.resultsPaper}
                 onClick={() =>
                   navigator.clipboard.writeText(
-                    Object.keys(inputs)
-                      .map(
-                        key => `${inputs[key].label}: ${inputs[key].value || 0}`
-                      )
-                      .join("\n") + `\nИТОГ: ${results}`
+                    formattedOutput ||
+                      Object.keys(inputs)
+                        .map(
+                          key =>
+                            `${inputs[key].label}: ${inputs[key].value || 0}`
+                        )
+                        .join("\n") + `\nИТОГ: ${income}`
                   )
                 }
               >
-                Ваша казна: {results}
+                Ваша казна: {income}
               </Paper>
             )}
             <div className={classes.spaceTop}>

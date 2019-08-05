@@ -2,10 +2,10 @@ import React, { Component, Fragment } from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
-import Topbar from "./Topbar";
-import SectionHeader from "./ui/SectionHeader";
-import { Organization, Order, Country } from "./Form";
-const backgroundShape = require("../images/shape.svg");
+import Topbar from "../Topbar";
+import SectionHeader from "../ui/SectionHeader";
+import { Organization, Order, Country } from "../Form";
+const backgroundShape = require("../../images/shape.svg");
 
 const styles = theme => ({
   root: {
@@ -28,14 +28,11 @@ const styles = theme => ({
 });
 
 class Page extends Component {
-  render() {
-    const { classes, pageName, fields, formula } = this.props;
+  state = { pageName: window.location.hash.slice(2) || "country" };
 
-    const formProps = {
-      fields,
-      formula,
-      pageName
-    };
+  render() {
+    const { classes } = this.props;
+    const { pageName } = this.state;
 
     return (
       <Fragment>
@@ -53,11 +50,11 @@ class Page extends Component {
               <Grid item xs={12}>
                 <SectionHeader title="Калькулятор дохода организаций" />
                 {pageName === "organization" ? (
-                  <Organization {...formProps} />
+                  <Organization />
                 ) : pageName === "order" ? (
-                  <Order {...formProps} />
+                  <Order />
                 ) : (
-                  <Country {...formProps} />
+                  <Country />
                 )}
               </Grid>
             </Grid>

@@ -1,6 +1,6 @@
 const [required, error] = [true, true];
 
-export const organizationFields = {
+const organization = {
   annual_turnover: { label: "Оборот организации", required: true },
   turnover_increase: {
     label: "Прирост оборота в процентах",
@@ -24,7 +24,7 @@ export const organizationFields = {
   }
 };
 
-export const orderFields = {
+const order = {
   annual_turnover: { label: "Оборот ордена", required },
   trust: { label: "Процент доверия", type: "percents", required },
   busyness: { label: "Процент занятости", type: "percents", required },
@@ -35,7 +35,7 @@ export const orderFields = {
   expense: { label: "Расходы за год", error }
 };
 
-export const countryFields = {
+const country = {
   population: {
     label: "Население страны",
     required
@@ -99,18 +99,27 @@ export const countryFields = {
     label: "Процент торгового налога",
     type: "percents"
   },
+  additional_percent: {
+    label: "Процентный бонус к доходу",
+    type: "percents"
+  },
+  additional_profit: {
+    label: "Дополнительный доход"
+  },
   exchequer: {
     label: "Старая казна"
   },
   technology_points: {
     label: "Количество очков технологий"
   },
-  additional_percent: {
-    label: "Процентный бонус к доходу",
-    type: "percents"
+  military_expenses: {
+    label: "Расходы на армию",
+    error
   },
   expense: {
-    label: "Расходы",
+    label: "Иные расходы",
     error
   }
 };
+
+export default { order, country, organization };
